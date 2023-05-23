@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const generateSVG = require('./lib/shape');
+const generateSVG = require('./utils/generateLogo');
 const fs = require('fs');
 
 const questions = [
