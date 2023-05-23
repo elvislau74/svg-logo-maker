@@ -1,30 +1,21 @@
+const Circle = require('../lib/circle');
+const Triangle = require('../lib/triangle');
+const Square = require('../lib/square');
+
 function generateSVG(data) {
-    if (data.shape === 'Circle') {
-        return `
-        <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-        <rect width="300" height="200" fill='white' />
-        <circle cx="150" cy="100" r="80" fill="${data.shapecolor}" />
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill='${data.textcolor}'>${data.text}</text>
-        </svg>
-        `;
+    const {text, textcolor, shape, shapecolor} = data;
+
+    if (shape === 'Circle') {
+        const circle = new Circle(text, textcolor, shape, shapecolor);
+        return circle.printLogo();
     }
-    else if (data.shape === 'Triangle') {
-        return `
-        <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-        <rect width="300" height="200" fill='white' />
-        <polygon points="150, 10 270, 155 40, 155" fill="${data.shapecolor}"/>
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill='${data.textcolor}'>${data.text}</text>
-        </svg>
-        `;
+    else if (shape === 'Triangle') {
+        const triangle = new Triangle(text, textcolor, shape, shapecolor);
+        return triangle.printLogo();
     }
-     else {
-        return `
-        <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-        <rect width="300" height="200" fill='white' />
-        <rect x="75" y="30" width="150" height="150" fill="${data.shapecolor}"/>
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill='${data.textcolor}'>${data.text}</text>
-        </svg>
-        `;
+    else {
+        const square = new Square(text, textcolor, shape, shapecolor);
+        return square.printLogo();
     }
 }
 
