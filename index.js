@@ -29,3 +29,20 @@ const questions = [
         message: 'What color would you like your shape to be (color keyword or hexadecimal number are both acceptable)?',
       },
 ];
+
+function writeToFile(fileName, data) {
+    fs.writeFile(`${fileName}.svg`, data, (err) =>
+        err ? console.error(err) : console.log("Success!")
+    );
+}
+
+function init() {
+    inquirer
+    .prompt(questions)
+    .then((answers) => {
+        console.log(answers);
+        // writeToFile(answers.shape, generateSVG.generateSVG(answers));
+    });
+}
+
+init();
