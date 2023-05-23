@@ -10,7 +10,7 @@ const questions = [
       },
       {
         type: 'input',
-        name: 'text-color',
+        name: 'textcolor',
         message: 'What color would you like your text to be (color keyword or hexadecimal number are both acceptable)?',
       },
       {
@@ -25,13 +25,13 @@ const questions = [
       },
       {
         type: 'input',
-        name: 'shape-color',
+        name: 'shapecolor',
         message: 'What color would you like your shape to be (color keyword or hexadecimal number are both acceptable)?',
       },
 ];
 
 function writeToFile(fileName, data) {
-    fs.writeFile(`${fileName}.svg`, data, (err) =>
+    fs.writeFile(`./examples/${fileName}.svg`, data, (err) =>
         err ? console.error(err) : console.log("Success!")
     );
 }
@@ -41,7 +41,7 @@ function init() {
     .prompt(questions)
     .then((answers) => {
         console.log(answers);
-        // writeToFile(answers.shape, generateSVG.generateSVG(answers));
+        writeToFile(answers.shape, generateSVG.generateSVG(answers));
     });
 }
 
