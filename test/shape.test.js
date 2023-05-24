@@ -3,7 +3,7 @@ const Shape = require('../lib/shape');
 describe('Shape', () => {
     describe('Instantiate', () => {
         it('should be an instance of Shape class', () => {
-            const shape = new Shape();
+            const shape = new Shape('BEE');
             
             expect(shape).toBeInstanceOf(Shape);
         })
@@ -15,6 +15,15 @@ describe('Shape', () => {
             const shape = new Shape(text);
 
             expect(shape.text).toBe(text);
+        })
+    })
+
+    describe('Capitalize text', () => {
+        it('should capitalize text properly', () => {
+            const text = 'bee';
+            const shape = new Shape(text);
+
+            expect(shape.text).toBe(text.toUpperCase());
         })
     })
 
@@ -73,21 +82,22 @@ describe('Shape', () => {
         })
     })
 
-    // describe('printLogo() method', () => {
-    //     it('should print SVG code with data', () => {
-    //         const shape = new Shape(
-    //             'BEE', 
-    //             'black', 
-    //             'Circle', 
-    //             'yellow'
-    //         );
+    describe('printLogo() method', () => {
+        it('should print SVG code with data', () => {
+            const shape = new Shape(
+                'BEE', 
+                'black', 
+                'Circle', 
+                'yellow'
+            );
 
-    //         expect(shape.printLogo()).toBe(
-    //         `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-    //         <rect width="300" height="200" fill='white' />
-    //         <circle cx="150" cy="100" r="80" fill="yellow" />
-    //         <text x="150" y="125" font-size="60" text-anchor="middle" fill="black">BEE</text>
-    //         </svg>`);
-    //     })
-    // })
+            const svgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+        <rect width="300" height="200" fill='white' />
+        <circle cx="150" cy="100" r="80" fill="yellow" />
+        <text x="150" y="125" font-size="60" text-anchor="middle" fill="black">BEE</text>
+        </svg>`;
+
+            expect(shape.printLogo()).toBe(svgCode);
+        })
+    })
 })
