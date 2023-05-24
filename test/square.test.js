@@ -82,7 +82,7 @@ describe('Square', () => {
         })
     })
 
-    describe('printLogo() method', () => {
+    describe('render() method', () => {
         it('should print SVG code with data', () => {
             const square = new Square(
                 'BEE', 
@@ -97,7 +97,7 @@ describe('Square', () => {
         <text x="150" y="125" font-size="60" text-anchor="middle" fill="black">BEE</text>
         </svg>`;
 
-            expect(square.printLogo()).toBe(svgCode);
+            expect(square.render()).toBe(svgCode);
         })
     })
 })

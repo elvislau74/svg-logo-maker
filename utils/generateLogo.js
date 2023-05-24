@@ -7,15 +7,15 @@ function generateSVG(data) {
 
     if (shape === 'Circle') {
         const circle = new Circle(text, textcolor, shape, shapecolor);
-        return circle.printLogo();
+        return circle.render();
     }
     else if (shape === 'Triangle') {
         const triangle = new Triangle(text, textcolor, shape, shapecolor);
-        return triangle.printLogo();
+        return triangle.render();
     }
     else {
         const square = new Square(text, textcolor, shape, shapecolor);
-        return square.printLogo();
+        return square.render();
     }
 };
 

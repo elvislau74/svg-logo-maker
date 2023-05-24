@@ -82,7 +82,7 @@ describe('Triangle', () => {
         })
     })
 
-    describe('printLogo() method', () => {
+    describe('render() method', () => {
         it('should print SVG code with data', () => {
             const triangle = new Triangle(
                 'BEE', 
@@ -97,7 +97,7 @@ describe('Triangle', () => {
         <text x="150" y="125" font-size="60" text-anchor="middle" fill="black">BEE</text>
         </svg>`;
 
-            expect(triangle.printLogo()).toBe(svgCode);
+            expect(triangle.render()).toBe(svgCode);
         })
     })
 })

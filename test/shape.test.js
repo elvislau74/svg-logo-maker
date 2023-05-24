@@ -82,7 +82,7 @@ describe('Shape', () => {
         })
     })
 
-    describe('printLogo() method', () => {
+    describe('render() method', () => {
         it('should print SVG code with data', () => {
             const shape = new Shape(
                 'BEE', 
@@ -97,7 +97,7 @@ describe('Shape', () => {
         <text x="150" y="125" font-size="60" text-anchor="middle" fill="black">BEE</text>
         </svg>`;
 
-            expect(shape.printLogo()).toBe(svgCode);
+            expect(shape.render()).toBe(svgCode);
         })
     })
 })

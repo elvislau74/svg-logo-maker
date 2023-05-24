@@ -82,7 +82,7 @@ describe('Circle', () => {
         })
     })
 
-    describe('printLogo() method', () => {
+    describe('render() method', () => {
         it('should print SVG code with data', () => {
             const circle = new Circle(
                 'BEE', 
@@ -97,7 +97,7 @@ describe('Circle', () => {
         <text x="150" y="125" font-size="60" text-anchor="middle" fill="black">BEE</text>
         </svg>`;
 
-            expect(circle.printLogo()).toBe(svgCode);
+            expect(circle.render()).toBe(svgCode);
         })
     })
 })
