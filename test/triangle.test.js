@@ -94,7 +94,7 @@ describe('Triangle', () => {
             const svgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
         <rect width="300" height="200" fill='white' />
         <polygon points="150, 10 270, 155 40, 155" fill="yellow"/>
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill='black'>BEE</text>
+        <text x="150" y="125" font-size="60" text-anchor="middle" fill="black">BEE</text>
         </svg>`;
 
             expect(triangle.printLogo()).toBe(svgCode);
