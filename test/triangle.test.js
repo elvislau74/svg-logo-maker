@@ -30,21 +30,15 @@ describe('Triangle', () => {
     })
 
     describe('Invalid text input', () => {
-        it('should throw an error when text is less than or greater than 3 characters', () => {
-            const t1 = () => {
-                new Triangle('hi');
-            };
-
-            const t2 = () => {
+        it('should throw an error when text is more than 3 characters', () => {
+            const t = () => {
                 new Triangle('bobby');
             };
 
-            const expectedErr = 'Text must be no less or more than 3 characters long.'
+            const expectedErr = 'Text must be no more than 3 characters long.'
 
-            expect(t1).toThrow(Error);
-            expect(t1).toThrow(expectedErr);
-            expect(t2).toThrow(Error);
-            expect(t2).toThrow(expectedErr);
+            expect(t).toThrow(Error);
+            expect(t).toThrow(expectedErr);
         })
     })
 
