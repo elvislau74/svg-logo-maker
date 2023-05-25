@@ -1,5 +1,7 @@
+// Assign module export needed for the following tests to a constant value
 const Triangle = require('../lib/triangle');
 
+// Tests for the Triangle constructor
 describe('Triangle', () => {
     describe('Instantiate', () => {
         it('should be an instance of Triangle class', () => {

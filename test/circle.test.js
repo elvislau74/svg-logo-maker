@@ -1,5 +1,7 @@
+// Assign module export needed for the following tests to a constant value
 const Circle = require('../lib/circle');
 
+// Tests for the circle constructor
 describe('Circle', () => {
     describe('Instantiate', () => {
         it('should be an instance of Circle class', () => {

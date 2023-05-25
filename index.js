@@ -1,7 +1,9 @@
+// Assign packages and module exports needed for this application to constant values
 const inquirer = require('inquirer');
 const generateSVG = require('./utils/generateLogo');
 const fs = require('fs');
 
+// Array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -30,12 +32,16 @@ const questions = [
       },
 ];
 
+// This function writes a SVG file
 function writeToFile(fileName, data) {
     fs.writeFile(`./examples/${fileName}.svg`, data, (err) =>
         err ? console.error(err) : console.log("Success!")
     );
 }
 
+// This function initializes the app
+// Uses inquirer to prompt the user with questions 
+// Pulls answers to be used to create and print to svg file
 function init() {
     inquirer
     .prompt(questions)
@@ -45,4 +51,5 @@ function init() {
     });
 }
 
+// Function call to initialize app
 init();

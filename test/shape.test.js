@@ -1,5 +1,7 @@
+// Assign module export needed for the following tests to a constant value
 const Shape = require('../lib/shape');
 
+// Tests for the Shape constructor
 describe('Shape', () => {
     describe('Instantiate', () => {
         it('should be an instance of Shape class', () => {

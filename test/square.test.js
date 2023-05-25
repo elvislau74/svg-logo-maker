@@ -1,5 +1,7 @@
+// Assign module export needed for the following tests to a constant value
 const Square = require('../lib/square');
 
+// Tests for the Square constructor
 describe('Square', () => {
     describe('Instantiate', () => {
         it('should be an instance of Square class', () => {
