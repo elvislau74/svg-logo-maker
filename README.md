@@ -32,6 +32,7 @@
 
   As shown in the video below, to start the program to produce a SVG Logo, you must first type into the terminal 'node.index', after which you will be prompted on the text, text color, shape, and shape color of your Logo. After all those questions are answered, you will be able to find your generated logo in the examples folder.
 
+  If the video above does not work, [click here](https://drive.google.com/file/d/1Q9wJxK3UVpCcYtFcS1ULbFlKgi6H-GxV/view?usp=sharing).
 
 
   ## Contributing
